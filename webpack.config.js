@@ -3,6 +3,11 @@ const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
 const share = mf.share;
 
+
+const prodlistdomain = process.env.PRODLIST_URL;
+const cartdomain = process.env.CART_URL;
+
+
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
   path.join(__dirname, 'tsconfig.json'),
@@ -24,11 +29,9 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
         remotes: {
-            "productlistmfe": "productlistmfeapp@http://localhost:8888/remoteEntry.js",
-            // "productlistmfe": "productlistmfeapp@http://40.117.224.87:8888/remoteEntry.js"
-
-            "cartmfe": "cartmfeapp@http://localhost:7777/remoteEntry.js",
-            "paymentmfe": "paymentmfeapp@http://localhost:1111/remoteEntry.js"
+            "productlistmfe": `productlistmfeapp@{PRODLIST_URL}`,
+            "cartmfe": `cartmfeapp@{CART_URL}`,
+            //"paymentmfe": "paymentmfeapp@http://localhost:1111/remoteEntry.js"
         },
 
         shared: share({
@@ -39,6 +42,5 @@ module.exports = {
           "karthikhellomodule": { singleton: true, requiredVersion: 'auto' }
         })
     }),
-    sharedMappings.getPlugin()
-  ]
+]
 };
