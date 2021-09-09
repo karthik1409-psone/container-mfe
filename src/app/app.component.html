@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header containerstyle">
+        <h2>CONTAINER APP (Angular)</h2>
+      </div>
+      <div class="card-body">
+        <p>{{ message }}</p>
+        <a routerLink="/">Home</a> | 
+        <a routerLink="/productlistmfe">ProductList MFE App</a> | 
+        <a routerLink="/cartmfe">Cart MFE App</a> |
+        <a routerLink="/paymentmfe">Payment MFE App</a>
+        <hr/>
+        <router-outlet></router-outlet> 
+      </div>
+    </div>
+  </div>
+</div>

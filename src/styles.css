@@ -1,0 +1,16 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+.containerstyle
+{
+    background-color: blue;
+}
+
+.cartstyle
+{
+    background-color: orange;
+}
+
+.productliststyle
+{
+    background-color:yellow;
+}
