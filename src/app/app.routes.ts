@@ -13,11 +13,11 @@ const routes = [
     {
         path: 'cartmfe',
         loadChildren: () => import('cartmfe/CartMFE').then(m => m.CartModule)
-    },
-    {
-        path: 'paymentmfe',
-        loadChildren: () => import('paymentmfe/PaymentModule').then(m => m.PaymentModule)
     }
+    // {
+    //     path: 'paymentmfe',
+    //     loadChildren: () => import('paymentmfe/PaymentModule').then(m => m.PaymentModule)
+    // }
 ];
 
 export default RouterModule.forRoot(routes);
