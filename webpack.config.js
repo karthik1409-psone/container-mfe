@@ -29,8 +29,8 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
         remotes: {
-            "productlistmfe": `productlistmfeapp@{PRODLIST_URL}`,
-            "cartmfe": `cartmfeapp@{CART_URL}`,
+            "productlistmfe": `productlistmfeapp@{prodlistdomain}`,
+            "cartmfe": `cartmfeapp@{cartdomain}`,
             //"paymentmfe": "paymentmfeapp@http://localhost:1111/remoteEntry.js"
         },
 
